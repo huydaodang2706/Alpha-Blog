@@ -1,5 +1,6 @@
 @import 'bootstrap/dist/css/bootstrap';
 
+//Style alpha blog nav-item
 #logo{
   float: left;
   font-size: 1.7em;
@@ -12,4 +13,76 @@
 #logo:hover{
   color: #fff;
   text-decoration: none;
+}
+
+.center{
+  text-align: center;
+}
+//Style jumbotron
+#home.jumbotron{
+  background-image: asset-url('home_cover.jpg');
+  background-size: cover;
+  height: 800px;
+  width: 100%;
+}
+
+.jumbotron h1{
+  color: #fff;
+  text-align: center;
+  margin-bottom: 30px;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+
+.btn-xlarge{
+  font-size: 1.7em;
+  background-color: black;
+}
+
+// Style footer
+footer{
+    margin-top: 45px;
+    padding-top: 5px;
+    border-top: 1px solid #eaeaea;
+}
+
+footer a:hover{
+  color: #222;
+}
+
+footer small{
+  float: left;
+}
+
+footer ul{
+  float: right;
+  list_style: none;
+}
+
+footer ul li{
+  float: left;
+  margin-left: 15px;
+}
+
+//Style create article
+.fit-right{
+  float: right;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+//Style form for show page
+
+//Style the index page
+.article-title {
+  font-weight: bold;
+  font-size: 1.5em;
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+
+.article-body {
+  border-top: 1px solid #eaeaea;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }

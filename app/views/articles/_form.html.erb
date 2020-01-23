@@ -1,20 +1,36 @@
 
 <!-- Display article errors  -->
-<% if @article.errors.any? %>
-<h2>The following errors prevented the article from getting created</h2>
-<ul>
-<% @article.errors.full_messages.each do |msg| %>
-  <li><%= msg %></li>
-<% end %>
-</ul>
-<% end %>
-
+<!-- <%= render 'share/errors', obj: @article %> -->
+<%= render 'share/errors', obj: @article %>
 <!-- Form for create new article  -->
-<%= form_for @article do |f| %>
-<%= f.label :title, "Title input" %><br/>
-<%= f.text_field :title %><br/>
-<%= f.label :description, "Description input" %><br/>
-<%= f.text_area :description , size: "60x12" %><br/>
-<%= f.submit %><br/>
-<% end %>
-<%= link_to "Back to articles listing", articles_path %>
+<div class="row">
+
+    <%= form_for @article do |f| %>
+      <div class="form-group row">
+        <div class="control-label col-sm-3">
+          <%= f.label :title, "Title",class:"fit-right" %></br>
+        </div>
+        <div class="col-sm-8">
+          <%= f.text_field :title, class: "form-control",placeholder: "Title of article", autofocus: true %><br/>
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="control-label col-sm-3">
+          <%= f.label :description, "Description", class: "fit-right" %>
+        </div>
+        <div class="col-sm-8">
+          <%= f.text_area :description, size: "90x12"  ,class:"form-control",placeholder:"Body of article" %><br/>
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-3">
+            <%= f.submit class: "btn btn-primary btn-lg" %><br/>
+        </div>
+        [<%= link_to "Cancel request and return to articles listing", articles_path %>]
+      </div>
+
+    <% end %>
+
+
+</div>
