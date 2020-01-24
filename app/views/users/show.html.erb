@@ -1,0 +1,9 @@
+<h1 align="center" style="font-size:3em; font-weight:bold;">Welcome to <%= @user.username %>'s page' </h1>
+</br>
+<div class="row">
+  <div class="center">
+    <%= gravatar_for @user, size: 100 %>
+  </div>
+</div>
+<h4 align="center"><%= @user.username%>'s articles</h4>
+<%= render 'articles/article',obj: @user.articles %>

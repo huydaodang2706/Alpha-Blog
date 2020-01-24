@@ -1,0 +1,42 @@
+<!-- Display user errors  -->
+<%= render 'share/errors', obj: @user%>
+<!-- Form for create new user  -->
+<div class="row">
+
+    <%= form_for @user do |f| %>
+      <div class="form-group row">
+        <div class="control-label col-sm-3">
+          <%= f.label :username, "Username",class:"fit-right" %></br>
+        </div>
+        <div class="col-sm-8">
+          <%= f.text_field :username, class: "form-control",placeholder: "Enter an username", autofocus: true %><br/>
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="control-label col-sm-3">
+          <%= f.label :email, "Email", class: "fit-right" %>
+        </div>
+        <div class="col-sm-8">
+          <%= f.email_field :email, size: "90x1"  ,class:"form-control",placeholder:"Enter an email" %><br/>
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="control-label col-sm-3">
+          <%= f.label :password, "Password", class: "fit-right" %>
+        </div>
+        <div class="col-sm-8">
+          <%= f.password_field :password ,class:"form-control",placeholder:"Enter a password" %><br/>
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-3">
+            <%= f.submit(@user.new_record? ? "Sign up": "Update account", class:"btn btn-primary btn-lg")%><br/>
+        </div>
+        [<%= link_to "Cancel request and return to articles listing", articles_path %>]
+        </div>
+
+    <% end %>
+
+
+</div>
