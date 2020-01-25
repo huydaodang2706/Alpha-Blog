@@ -1,0 +1,15 @@
+<h1 align="center" style="font-size:3em; font-weight:bold;">Users Listing</h1></br>
+<div align="center">
+  <% @users.each do |user| %>
+    <ul class="listing">
+      <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6 jumbotron">
+          <li><%= link_to gravatar_for(user), user_path(user) %></li>
+          <li class="article-title"><%= link_to user.username, user_path(user) %></li>
+          <li><small><%= pluralize(user.articles.count,"article")%></small></li>
+        </div>
+        <div class="col-md-3"></div>
+      </div>
+  <% end %>
+</div>
