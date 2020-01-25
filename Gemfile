@@ -7,6 +7,11 @@ ruby '2.7.0'
 gem 'rails', '~> 6.0.2', '>= 6.0.2.1'
 
 gem 'bcrypt', '~> 3.1.7'
+
+gem 'kaminari'
+gem 'ransack'
+gem 'bootstrap4-kaminari-views'
+
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
 # Use SCSS for stylesheets
