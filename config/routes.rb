@@ -14,4 +14,5 @@ Rails.application.routes.draw do
   # Users and articles papge
   resources :users, except: [:new]
   resources :articles
+  resources :categories, except: [:destroy]
 end
