@@ -8,7 +8,10 @@
       <hr>
       <div class="arcicle-body">
         <%= truncate(article.description, length: 100) %>
-      </div>
+      </div></br>
+      <% if article.categories.any? %>
+        <p>Categories: <%= render article.categories %></p>
+      <% end %>
       <hr>
       <div class="article-meta-details">
         <small>
