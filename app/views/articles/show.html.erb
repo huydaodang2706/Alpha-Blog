@@ -4,7 +4,7 @@
   <div class="well col-md-8 ">
     <h4 class="center"><strong>Description</strong></h4>
     <hr>
-    <div class="center jumbotron">
+    <div class="jumbotron">
       <%= simple_format(@article.description) %></br>
       <% if @article.categories.any? %>
         <p>Categories: <%= render @article.categories %></p>
