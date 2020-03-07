@@ -10,13 +10,6 @@
   </head>
 
   <body>
-    <%= render 'layouts/navigation' %>
-    <%= render 'layouts/messages' %>
-    <div class="container">
-      <%= yield %>
-    </div>
-    <%= render 'layouts/footer'%>
-    <!-- <%= debug(params) if Rails.env.development? %> -->
     <!-- Load Facebook SDK for JavaScript -->
       <div id="fb-root"></div>
       <script>
@@ -43,5 +36,13 @@
   logged_in_greeting="Hi! How can we help you? Welcome you to ours page"
   logged_out_greeting="Hi! How can we help you? Welcome you to ours page">
       </div>
+    <%= render 'layouts/navigation' %>
+    <%= render 'layouts/messages' %>
+    <div class="container">
+      <%= yield %>
+    </div>
+    <%= render 'layouts/footer'%>
+    <!-- <%= debug(params) if Rails.env.development? %> -->
+  
   </body>
 </html>
